@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpotifyMini.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowPosition" Type="SpotifyMini.Objects.WindowPosition" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SaveWindowPosition" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ViewMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Minimal View</Value>
+    </Setting>
+    <Setting Name="PlayerMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spotify</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

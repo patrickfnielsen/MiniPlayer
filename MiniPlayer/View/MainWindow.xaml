@@ -1,0 +1,36 @@
+﻿<Window x:Class="MiniPlayer.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:MiniPlayer.View"
+        mc:Ignorable="d"
+        Title="SpotifyMini"
+        Height="350"
+        Width="350"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        Background="{StaticResource BackgroundColor}">
+    <Window.Top>
+        <Binding Path="Main.Position.Top" Mode="TwoWay" Source="{StaticResource Locator}"/>
+    </Window.Top>
+    <Window.Left>
+        <Binding Path="Main.Position.Left" Mode="TwoWay" Source="{StaticResource Locator}"/>
+    </Window.Left>
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Icon="" Header="_Settings" Command="{Binding ShowSettings}" DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}"/>
+            <MenuItem Icon="" Header="_Exit" Command="{Binding ExitApplication}" DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <Grid DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}">
+        <ContentPresenter Content="{Binding Content}"/>
+        <view:PlayerControl Player="{Binding Controller.Player, Source={StaticResource Locator}}"/>
+    </Grid>
+</Window>
